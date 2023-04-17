@@ -18,7 +18,7 @@ class FileRepository
         $path = $file->store('uploads', 's3');
 
         $data = new File();
-        $data->bucket_id = $request->input('');
+        $data->bucket_id = 1;
         $data->filename = basename($path);
         $data->size = $file->getSize();
         $data->created_at = date('Y-m-d');
